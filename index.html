@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>خطة اختراق السوق الخليجي - د. حسام الدين مصطفى</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -38,10 +38,17 @@
     </script>
 
     <style>
-        /* Custom Styles & Animations */
+        /* Custom Styles, Gradients & Animations */
         body {
             font-family: 'Tajawal', sans-serif;
             background-color: #f1f5f9;
+            /* Modern attractive corporate background */
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(219, 234, 254, 0.7) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(224, 242, 254, 0.7) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(219, 234, 254, 0.7) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(224, 242, 254, 0.7) 0px, transparent 50%);
+            background-attachment: fixed;
             color: #1e293b;
             scroll-behavior: smooth;
         }
@@ -50,19 +57,21 @@
             font-family: 'Cairo', sans-serif;
         }
 
-        /* Portfolio Section Styling */
+        /* Portfolio Section Styling (Glassmorphism integration) */
         .portfolio-section {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 4rem 1rem;
+            padding: 5rem 2rem;
             position: relative;
-            background-color: #ffffff;
-            margin-bottom: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            margin-bottom: 3rem;
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             max-width: 1280px;
             margin-left: auto;
             margin-right: auto;
@@ -71,7 +80,7 @@
         }
 
         .portfolio-section:nth-child(even) {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.85) 100%);
         }
 
         /* Scroll Animations */
@@ -119,22 +128,15 @@
                 page-break-after: always;
                 justify-content: flex-start;
                 padding: 2rem;
+                background: white !important;
             }
             .animate-on-scroll { opacity: 1 !important; transform: none !important; }
         }
 
-        /* Glassmorphism Cards */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Custom Scrollbar for Emails */
-        .email-body::-webkit-scrollbar { width: 6px; }
-        .email-body::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
-        .email-body::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        /* Custom Scrollbar for Emails & Modals */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
     </style>
 </head>
 <body class="pt-8 pb-32 px-4 md:px-8">
@@ -144,7 +146,7 @@
         <button onclick="window.print()" class="flex items-center gap-2 bg-brand-primary text-white px-5 py-2 rounded-full font-bold hover:bg-blue-800 transition-colors shadow-lg">
             <i class="fa-solid fa-file-pdf"></i> تحميل كـ PDF
         </button>
-        <a href="#website-link" class="flex items-center gap-2 bg-white text-brand-primary border-2 border-brand-primary px-5 py-2 rounded-full font-bold hover:bg-blue-50 transition-colors">
+        <a href="https://hosameldinmostafa.com" target="_blank" class="flex items-center gap-2 bg-white text-brand-primary border-2 border-brand-primary px-5 py-2 rounded-full font-bold hover:bg-blue-50 transition-colors">
             <i class="fa-solid fa-globe"></i> زيارة الموقع
         </a>
     </div>
@@ -155,13 +157,13 @@
             <div class="inline-block bg-blue-100 text-brand-primary px-4 py-1 rounded-full font-bold text-sm mb-6 border border-blue-200">
                 <i class="fa-solid fa-shield-halved mr-1"></i> بوليصة تأمين ضد الخسائر المليارية
             </div>
-            <h1 class="text-5xl md:text-7xl font-black text-brand-primary leading-tight mb-6">
-                استراتيجية اختراق السوق الخليجي
+            <h1 class="text-5xl md:text-7xl font-black text-brand-primary leading-tight mb-6 drop-shadow-sm">
+                استراتيجية نمو وتطوير الأعمال لاختراق السوق الخليجي
             </h1>
             <p class="text-2xl text-brand-muted font-bold mb-8">
                 تحويل خدمات <span class="text-brand-accent">د. حسام الدين مصطفى</span> من استشارات فنية إلى "درع أمان مؤسسي" للكيانات الكبرى.
             </p>
-            <div class="flex justify-center gap-6 mt-12">
+            <div class="flex justify-center gap-6 mt-12 bg-white/60 p-6 rounded-2xl backdrop-blur-sm border border-white">
                 <div class="text-center">
                     <div class="text-4xl font-black text-brand-primary font-cairo">33+</div>
                     <div class="text-sm font-bold text-gray-500 mt-1">عاماً من الخبرة</div>
@@ -181,30 +183,26 @@
     </section>
 
     <!-- Section 2: The Data & Market Need -->
-    <section class="portfolio-section bg-slate-50" id="slide2">
+    <section class="portfolio-section" id="slide2">
         <div class="w-full">
             <h2 class="text-4xl font-black text-brand-primary text-center mb-16 animate-on-scroll">لماذا يحتاج الخليج لخبير سيادي الآن؟</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Stat Card 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center animate-on-scroll">
+                <div class="bg-white/80 p-8 rounded-2xl shadow-lg border border-blue-50 text-center animate-on-scroll hover:-translate-y-2 transition-transform">
                     <div class="text-brand-accent text-4xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
                     <h3 class="text-5xl font-black font-cairo text-brand-dark mb-2">$33.1B</h3>
                     <p class="text-gray-600 font-bold">حجم سوق الكشف عن الاحتيال عالمياً (2024)</p>
                 </div>
-                <!-- Stat Card 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center animate-on-scroll delay-100">
+                <div class="bg-white/80 p-8 rounded-2xl shadow-lg border border-blue-50 text-center animate-on-scroll delay-100 hover:-translate-y-2 transition-transform">
                     <div class="text-brand-accent text-4xl mb-4"><i class="fa-solid fa-file-signature"></i></div>
                     <h3 class="text-5xl font-black font-cairo text-brand-dark mb-2">1,015</h3>
                     <p class="text-gray-600 font-bold">قضية تزوير تعاملت معها شرطة دبي في عام 2024 وحده</p>
                 </div>
-                <!-- Stat Card 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center animate-on-scroll delay-200">
+                <div class="bg-white/80 p-8 rounded-2xl shadow-lg border border-blue-50 text-center animate-on-scroll delay-200 hover:-translate-y-2 transition-transform">
                     <div class="text-brand-accent text-4xl mb-4"><i class="fa-solid fa-money-bill-wave"></i></div>
                     <h3 class="text-5xl font-black font-cairo text-brand-dark mb-2">1.2B</h3>
                     <p class="text-gray-600 font-bold">درهم إماراتي خسائر مقدرة للاحتيال المالي (2021-2023)</p>
                 </div>
-                <!-- Stat Card 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center animate-on-scroll delay-300">
+                <div class="bg-white/80 p-8 rounded-2xl shadow-lg border border-blue-50 text-center animate-on-scroll delay-300 hover:-translate-y-2 transition-transform">
                     <div class="text-brand-accent text-4xl mb-4"><i class="fa-solid fa-robot"></i></div>
                     <h3 class="text-3xl font-black font-cairo text-brand-dark mb-2">الذكاء الاصطناعي</h3>
                     <p class="text-gray-600 font-bold">خلق هويات اصطناعية تعجز أمامها فلاتر الـ KYC التقليدية</p>
@@ -219,107 +217,172 @@
             <div class="animate-on-scroll">
                 <h2 class="text-4xl lg:text-5xl font-black text-brand-primary mb-6 leading-tight">الخبرة التي تحسم النزاعات وتوقف النزيف المالي</h2>
                 <ul class="space-y-6 text-lg text-gray-700 font-medium">
-                    <li class="flex items-start gap-4">
+                    <li class="flex items-start gap-4 bg-white/60 p-4 rounded-xl border border-white">
                         <i class="fa-solid fa-circle-check text-brand-accent text-2xl mt-1"></i>
                         <div>
-                            <strong class="text-brand-dark font-bold text-xl block">قيادة سيادية:</strong> 
+                            <strong class="text-brand-dark font-bold text-xl block mb-1">قيادة سيادية:</strong> 
                             رئيس سابق للإدارة العامة لأبحاث التزييف والتزوير بوزارة العدل المصرية.
                         </div>
                     </li>
-                    <li class="flex items-start gap-4">
+                    <li class="flex items-start gap-4 bg-white/60 p-4 rounded-xl border border-white">
                         <i class="fa-solid fa-circle-check text-brand-accent text-2xl mt-1"></i>
                         <div>
-                            <strong class="text-brand-dark font-bold text-xl block">رقابة وتفتيش:</strong> 
+                            <strong class="text-brand-dark font-bold text-xl block mb-1">رقابة وتفتيش:</strong> 
                             رئيس لجنة التفتيش الفني، مما يمنحه قدرة استثنائية على تفنيد ونقض تقارير الخصوم الضعيفة.
                         </div>
                     </li>
-                    <li class="flex items-start gap-4">
+                    <li class="flex items-start gap-4 bg-white/60 p-4 rounded-xl border border-white">
                         <i class="fa-solid fa-circle-check text-brand-accent text-2xl mt-1"></i>
                         <div>
-                            <strong class="text-brand-dark font-bold text-xl block">اعتمادات دولية:</strong> 
+                            <strong class="text-brand-dark font-bold text-xl block mb-1">اعتمادات دولية:</strong> 
                             قائد فريق الجودة الحاصل على الاعتماد الدولي، مما يضفي حصانة قانونية لتقاريره أمام المحاكم.
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="animate-on-scroll delay-200">
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white">
                     <img src="https://myhomeegypt.net/wp-content/uploads/2026/05/Untitled-design-69.png" alt="د. حسام الدين مصطفى" class="w-full h-[500px] object-cover object-top">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-primary to-transparent p-6 pt-20 text-white text-center">
-                        <h3 class="font-cairo font-black text-2xl">د. حسام الدين مصطفى</h3>
-                        <p class="font-bold opacity-90">خبير استشاري محلف - الطب الشرعي</p>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-dark via-brand-primary/90 to-transparent p-6 pt-24 text-white text-center">
+                        <h3 class="font-cairo font-black text-3xl mb-1">د. حسام الدين مصطفى</h3>
+                        <p class="font-bold text-blue-200">خبير استشاري محلف - الطب الشرعي</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Trust & Partnerships -->
-    <section class="portfolio-section bg-brand-dark text-white" id="slide4">
-        <div class="w-full text-center animate-on-scroll">
-            <h2 class="text-4xl lg:text-5xl font-black text-white mb-4">سجل حافل بالثقة والموثوقية</h2>
-            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">جهات سيادية ومصرفية كبرى اعتمدت على خبراتنا في تأمين عملياتها وتدريب كوادرها.</p>
-            
-            <div class="relative w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-gray-700 animate-on-scroll delay-200">
-                <img src="https://myhomeegypt.net/wp-content/uploads/2026/05/d87490ad-18dd-4116-b834-82fa5b7e9b22.jpg" alt="شركاء النجاح والثقة" class="w-full h-auto object-cover">
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 5: The Sales Engine (Automation) -->
-    <section class="portfolio-section" id="slide5">
+    <!-- Section 4: Architecture & SaaS Engine -->
+    <section class="portfolio-section" id="slide4">
         <div class="w-full">
-            <h2 class="text-4xl font-black text-brand-primary text-center mb-16 animate-on-scroll">محرك النمو والأتمتة (B2B Pipeline)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 animate-on-scroll">
-                    <div class="w-16 h-16 bg-blue-100 text-brand-primary rounded-xl flex items-center justify-center text-3xl mb-6">
-                        <i class="fa-solid fa-filter"></i>
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="bg-blue-100 text-brand-primary font-bold px-4 py-1 rounded-full text-sm mb-4 inline-block">SaaS & Automation</span>
+                <h2 class="text-4xl lg:text-5xl font-black text-brand-primary">البنية التحتية ومحرك النمو التقني</h2>
+                <p class="text-xl text-gray-600 mt-4 max-w-3xl mx-auto font-medium">نظام بيئي متكامل لجمع البيانات، إدارتها، وتحويلها إلى صفقات استشارية عالية القيمة (High-Ticket) دون تدخل يدوي مستمر.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Line connector for desktop -->
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-brand-accent to-blue-200 -z-10 transform -translate-y-1/2"></div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-t-brand-accent animate-on-scroll relative">
+                    <div class="w-16 h-16 bg-brand-dark text-white rounded-full flex items-center justify-center text-2xl absolute -top-8 left-1/2 transform -translate-x-1/2 shadow-lg border-4 border-white">1</div>
+                    <div class="text-center mt-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Apollo.io_logo.png" alt="Apollo.io" class="h-10 mx-auto mb-4 opacity-80" onerror="this.src='https://placehold.co/100x40/fff/1e3a8a?text=Apollo.io'">
+                        <h3 class="text-2xl font-black text-brand-dark mb-3">استخراج البيانات</h3>
+                        <p class="text-gray-600 font-medium text-sm leading-relaxed">استخدام (Apollo.io) لسحب بيانات الـ C-Level الدقيقة: الشركاء الإداريين ورؤساء المخاطر بالبنوك الخليجية.</p>
                     </div>
-                    <h3 class="text-2xl font-black text-brand-dark mb-3">1. استخراج دقيق</h3>
-                    <p class="text-gray-600 font-medium leading-relaxed">استخدام (Apollo.io) لاستخراج بيانات صناع القرار بدقة: الشركاء الإداريين في مكاتب الفئة الأولى (Tier 1)، ورؤساء المخاطر في البنوك الخليجية حصراً.</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 animate-on-scroll delay-100">
-                    <div class="w-16 h-16 bg-sky-100 text-brand-accent rounded-xl flex items-center justify-center text-3xl mb-6">
-                        <i class="fa-solid fa-gears"></i>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-t-brand-primary animate-on-scroll delay-100 relative">
+                    <div class="w-16 h-16 bg-brand-dark text-white rounded-full flex items-center justify-center text-2xl absolute -top-8 left-1/2 transform -translate-x-1/2 shadow-lg border-4 border-white">2</div>
+                    <div class="text-center mt-6">
+                        <div class="text-brand-primary text-4xl mb-4"><i class="fa-solid fa-database"></i></div>
+                        <h3 class="text-2xl font-black text-brand-dark mb-3">المركز العصبي (Firestore)</h3>
+                        <p class="text-gray-600 font-medium text-sm leading-relaxed">استضافة عمليات الـ SaaS والأتمتة على قواعد بيانات <strong>Google Firestore</strong> لضمان تدفق البيانات وإدارة الـ Pipeline بسرعة وأمان ومزامنة لحظية.</p>
                     </div>
-                    <h3 class="text-2xl font-black text-brand-dark mb-3">2. أتمتة الـ SaaS</h3>
-                    <p class="text-gray-600 font-medium leading-relaxed">ربط البيانات عبر <strong>تطبيقات SaaS لعمليات الأتمتة ومسار التواصل (Pipeline)</strong> مثل (HubSpot و أدوات الإرسال المتقدمة) لتنظيف القوائم وإرسال حملات مخصصة بأسماء الشركات الحقيقية دون تدخل يدوي.</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 animate-on-scroll delay-200">
-                    <div class="w-16 h-16 bg-blue-900 text-white rounded-xl flex items-center justify-center text-3xl mb-6">
-                        <i class="fa-regular fa-calendar-check"></i>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-t-green-500 animate-on-scroll delay-200 relative">
+                    <div class="w-16 h-16 bg-brand-dark text-white rounded-full flex items-center justify-center text-2xl absolute -top-8 left-1/2 transform -translate-x-1/2 shadow-lg border-4 border-white">3</div>
+                    <div class="text-center mt-6">
+                        <div class="text-green-500 text-4xl mb-4"><i class="fa-solid fa-envelope-circle-check"></i></div>
+                        <h3 class="text-2xl font-black text-brand-dark mb-3">التواصل والتحويل</h3>
+                        <p class="text-gray-600 font-medium text-sm leading-relaxed">إرسال الحملات عبر إيميل مهني مخصص وربط الردود برابط الدومين الخاص <strong>hosameldinmostafa.com</strong> لجدولة الاجتماعات الاستكشافية.</p>
                     </div>
-                    <h3 class="text-2xl font-black text-brand-dark mb-3">3. الحجز والتحويل</h3>
-                    <p class="text-gray-600 font-medium leading-relaxed">استقبال الردود الإيجابية فوراً وإغلاق المواعيد عبر رابط موقع الويب ونظام حجز مباشر (Calendly) للترتيب للقاءات الميدانية.</p>
-                    <a href="https://hossam-forensics.com" target="_blank" id="website-link" class="mt-4 inline-block text-brand-accent font-bold hover:underline">
-                        <i class="fa-solid fa-link"></i> hossam-forensics.com (نموذج مقترح)
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 6: Content Strategy & Modals -->
-    <section class="portfolio-section bg-slate-50" id="slide6">
+    <!-- Section 5: Budget & Execution Costs -->
+    <section class="portfolio-section bg-brand-dark text-white" id="slide5">
+        <div class="w-full">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl lg:text-5xl font-black text-white mb-4">الميزانية التشغيلية وخطة التكاليف</h2>
+                <p class="text-xl text-blue-200 font-medium max-w-3xl mx-auto">خطة اقتصادية ذكية تركز على العائد على الاستثمار (ROI) باستخدام أحدث أدوات التكنولوجيا.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Cost Card 1 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 animate-on-scroll hover:border-brand-accent transition-colors">
+                    <div class="w-12 h-12 bg-blue-900/50 text-brand-accent rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-700 pb-4">البنية التحتية الأساسية</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center">
+                            <span class="text-slate-300">الدومين (3 سنوات)</span>
+                            <span class="font-bold text-white bg-slate-700 px-3 py-1 rounded">$40</span>
+                        </li>
+                        <li class="text-sm text-brand-accent font-medium mb-2">hosameldinmostafa.com</li>
+                        <li class="flex justify-between items-center">
+                            <span class="text-slate-300">بريد إلكتروني مهني (سنوي)</span>
+                            <span class="font-bold text-white bg-slate-700 px-3 py-1 rounded">$9</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cost Card 2 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 animate-on-scroll delay-100 hover:border-brand-accent transition-colors relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-brand-dark text-xs font-bold px-3 py-1 rounded-bl-lg">المركز العصبي</div>
+                    <div class="w-12 h-12 bg-blue-900/50 text-brand-accent rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-700 pb-4">الأتمتة واستخراج البيانات</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center">
+                            <span class="text-slate-300">اشتراك Apollo.io (شهري)</span>
+                            <span class="font-bold text-white bg-slate-700 px-3 py-1 rounded">$59</span>
+                        </li>
+                        <li class="flex justify-between items-start flex-col gap-2 mt-4">
+                            <span class="text-slate-300">قواعد البيانات (Firestore SaaS)</span>
+                            <span class="font-bold text-green-400 text-sm">مرن (Pay-as-you-go) - يبدأ مجاناً</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cost Card 3 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 animate-on-scroll delay-200 hover:border-brand-accent transition-colors">
+                    <div class="w-12 h-12 bg-blue-900/50 text-brand-accent rounded-lg flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-700 pb-4">اشتراكات متغيرة (للتوسع)</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center">
+                            <span class="text-slate-300 text-sm">أداة إرسال متخصصة (Smartlead)</span>
+                            <span class="font-bold text-white bg-slate-700 px-3 py-1 rounded text-sm">~$37/شهر</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="text-slate-300 text-sm">LinkedIn Sales Navigator</span>
+                            <span class="font-bold text-white bg-slate-700 px-3 py-1 rounded text-sm">~$99/شهر</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Content Strategy -->
+    <section class="portfolio-section" id="slide6">
         <div class="w-full text-center max-w-4xl mx-auto">
-            <h2 class="text-4xl font-black text-brand-primary mb-6 animate-on-scroll">بناء السلطة المعرفية على LinkedIn</h2>
-            <p class="text-xl text-gray-600 font-medium mb-12 animate-on-scroll">لن ننشر محتوى أكاديمي جاف. المحتوى سيطرح قضايا تزوير معقدة، يثير المخاوف، ويقدم الخبير كطوق نجاة.</p>
+            <span class="bg-blue-100 text-brand-primary font-bold px-4 py-1 rounded-full text-sm mb-4 inline-block">LinkedIn Authority</span>
+            <h2 class="text-4xl font-black text-brand-primary mb-6 animate-on-scroll">بناء السلطة المعرفية والتواجد الرقمي</h2>
+            <p class="text-xl text-gray-600 font-medium mb-12 animate-on-scroll">المحتوى لن يكون أكاديمياً جافاً. سنقوم بصياغة قصص واقعية عن الاختراقات المستندية التي تكلف الملايين، لنخاطب "نقاط الألم" لدى القيادات.</p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-6 animate-on-scroll delay-100">
-                <!-- Post 1 Button -->
-                <button onclick="openModal('modal-post-1')" class="group relative bg-white border-2 border-brand-primary p-6 rounded-2xl hover:bg-brand-primary hover:text-white transition-all text-right shadow-sm w-full">
-                    <div class="text-brand-accent group-hover:text-sky-200 text-3xl mb-4"><i class="fa-brands fa-linkedin"></i></div>
+                <button onclick="openModal('modal-post-1')" class="group relative bg-white border-2 border-brand-primary p-6 rounded-2xl hover:bg-brand-primary hover:text-white transition-all text-right shadow-lg w-full">
+                    <div class="text-brand-accent group-hover:text-sky-200 text-3xl mb-4"><i class="fa-solid fa-building-columns"></i></div>
                     <h3 class="text-2xl font-black mb-2">منشور القطاع المصرفي</h3>
-                    <p class="text-sm font-medium opacity-80 mb-4">قضية تزييف الهويات واختراق الـ KYC.</p>
-                    <span class="inline-block bg-slate-100 text-slate-600 group-hover:bg-blue-800 group-hover:text-white px-3 py-1 rounded text-sm font-bold">عرض النموذج <i class="fa-solid fa-arrow-left mr-1"></i></span>
+                    <p class="text-sm font-medium opacity-80 mb-4">قضية تزييف الهويات واختراق الـ KYC بالذكاء الاصطناعي.</p>
+                    <span class="inline-block bg-slate-100 text-slate-600 group-hover:bg-blue-800 group-hover:text-white px-3 py-1 rounded text-sm font-bold shadow-sm">عرض النموذج الفعلي <i class="fa-solid fa-arrow-left mr-1"></i></span>
                 </button>
 
-                <!-- Post 2 Button -->
-                <button onclick="openModal('modal-post-2')" class="group relative bg-white border-2 border-brand-primary p-6 rounded-2xl hover:bg-brand-primary hover:text-white transition-all text-right shadow-sm w-full">
-                    <div class="text-brand-accent group-hover:text-sky-200 text-3xl mb-4"><i class="fa-solid fa-scale-balanced"></i></div>
-                    <h3 class="text-2xl font-black mb-2">منشور القطاع القانوني</h3>
-                    <p class="text-sm font-medium opacity-80 mb-4">خطورة التقارير الضعيفة في محاكم التحكيم.</p>
-                    <span class="inline-block bg-slate-100 text-slate-600 group-hover:bg-blue-800 group-hover:text-white px-3 py-1 rounded text-sm font-bold">عرض النموذج <i class="fa-solid fa-arrow-left mr-1"></i></span>
+                <button onclick="openModal('modal-post-2')" class="group relative bg-white border-2 border-brand-primary p-6 rounded-2xl hover:bg-brand-primary hover:text-white transition-all text-right shadow-lg w-full">
+                    <div class="text-brand-accent group-hover:text-sky-200 text-3xl mb-4"><i class="fa-solid fa-gavel"></i></div>
+                    <h3 class="text-2xl font-black mb-2">منشور القطاع القانوني والعقاري</h3>
+                    <p class="text-sm font-medium opacity-80 mb-4">خطورة التقارير الضعيفة في تجميد المشاريع بالمحاكم.</p>
+                    <span class="inline-block bg-slate-100 text-slate-600 group-hover:bg-blue-800 group-hover:text-white px-3 py-1 rounded text-sm font-bold shadow-sm">عرض النموذج الفعلي <i class="fa-solid fa-arrow-left mr-1"></i></span>
                 </button>
             </div>
         </div>
@@ -328,48 +391,46 @@
     <!-- Section 7: Cold Email Campaigns -->
     <section class="portfolio-section" id="slide7">
         <div class="w-full">
-            <h2 class="text-4xl font-black text-brand-primary text-center mb-4 animate-on-scroll">حملات البريد الإلكتروني البارد</h2>
-            <p class="text-center text-lg text-gray-600 mb-12 font-medium animate-on-scroll">رسائل قصيرة، حازمة، مصممة لاستخراج الردود وتحديد المواعيد المباشرة.</p>
+            <h2 class="text-4xl font-black text-brand-primary text-center mb-4 animate-on-scroll">حملات البريد الإلكتروني البارد (Outreach)</h2>
+            <p class="text-center text-lg text-gray-600 mb-12 font-medium animate-on-scroll">رسائل مدروسة، قصيرة، تخاطب المخاطر المباشرة ومصممة لاستخراج الردود وتحديد المواعيد المباشرة.</p>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-on-scroll delay-200">
                 <!-- Email 1 -->
-                <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
-                    <div class="bg-gray-100 px-4 py-3 border-b border-gray-200 flex items-center gap-2">
+                <div class="bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden flex flex-col">
+                    <div class="bg-slate-100 px-4 py-3 border-b border-gray-200 flex items-center gap-2">
                         <div class="w-3 h-3 rounded-full bg-red-400"></div>
                         <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
                         <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                        <span class="mr-4 text-sm font-bold text-gray-500">To: رؤساء المخاطر (البنوك)</span>
+                        <span class="mr-4 text-sm font-bold text-slate-500">To: رؤساء المخاطر والالتزام (البنوك)</span>
                     </div>
-                    <div class="p-6 email-body overflow-y-auto max-h-[350px]">
-                        <p class="text-sm font-bold text-brand-dark mb-4 border-b pb-2">الموضوع: لقاء حصري في [المدينة]: تحصين عمليات [اسم البنك] ضد التزوير المستندي المتقدم</p>
-                        <div class="text-gray-700 leading-relaxed font-medium">
+                    <div class="p-6 email-body overflow-y-auto max-h-[380px]">
+                        <p class="text-sm font-bold text-brand-dark mb-4 border-b pb-2">الموضوع: تأمين الضمانات الائتمانية في [اسم البنك] ضد اختراقات التزوير المتقدمة</p>
+                        <div class="text-gray-700 leading-relaxed font-medium text-sm md:text-base">
                             <p class="mb-3">سعادة الأستاذ [الاسم]،</p>
-                            <p class="mb-3">الأنظمة التقنية وحدها لم تعد تكفي لكشف الهويات الاصطناعية والتزييف العميق في التمويل التجاري.</p>
-                            <p class="mb-3">سأتواجد في [الدولة/المدينة] خلال الفترة من [تاريخ البدء] إلى [تاريخ الانتهاء] لعقد لقاءات استشارية مع عدد محدود من القيادات الرقابية.</p>
-                            <p class="mb-3">بصفتي رئيساً سابقاً للإدارة العامة لأبحاث التزييف والتزوير بوزارة العدل بخبرة 33 عاماً، ساعدت مؤسسات كالمركزي المصري وكبرى البنوك التجارية على إغلاق ثغرات مستندية كادت أن تكبدهم خسائر فادحة.</p>
-                            <p class="mb-3">يسعدني أن نلتقي لاحتساء القهوة لمدة 20 دقيقة لمناقشة سبل رفع متانة التدقيق الجنائي في [اسم البنك]. هل يتسع جدولكم للقاء يوم [تاريخ مقترح]؟</p>
-                            <p class="mt-6 text-sm text-gray-500 font-bold">د. حسام الدين مصطفى<br>خبير استشاري بالطب الشرعي</p>
+                            <p class="mb-3">الأنظمة التقنية في البنوك الخليجية تواجه صعوبة بالغة في كشف عمليات التزوير المعقدة والهويات الاصطناعية المستخدمة في التمويل التجاري.</p>
+                            <p class="mb-3">خلال إدارتي للإدارة العامة لأبحاث التزييف والتزوير بوزارة العدل المصرية عبر مسيرة امتدت لـ 33 عاماً، أثبتت التجارب أن الفحص المستندي البشري هو خط الدفاع الحاسم. لقد دربت كوادر البنك المركزي المصري، والمعهد المصرفي، وأكثر من 13 بنكاً تجارياً على سد هذه الثغرات المستندية.</p>
+                            <p class="mb-3">سأتواجد في [اسم المدينة] الشهر القادم. هل يتسع وقتك للقاء قصير نناقش فيه آلية التدقيق الاستباقي للضمانات عالية المخاطر لديكم؟</p>
+                            <p class="mt-6 text-xs text-gray-500 font-bold">خالص التقدير،<br>د. حسام الدين مصطفى<br>خبير استشاري بالطب الشرعي</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Email 2 -->
-                <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
-                    <div class="bg-gray-100 px-4 py-3 border-b border-gray-200 flex items-center gap-2">
+                <div class="bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden flex flex-col">
+                    <div class="bg-slate-100 px-4 py-3 border-b border-gray-200 flex items-center gap-2">
                         <div class="w-3 h-3 rounded-full bg-red-400"></div>
                         <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
                         <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                        <span class="mr-4 text-sm font-bold text-gray-500">To: الشركاء الإداريين (المحاماة)</span>
+                        <span class="mr-4 text-sm font-bold text-slate-500">To: الشركاء الإداريين (مكاتب المحاماة الفئة الأولى)</span>
                     </div>
-                    <div class="p-6 email-body overflow-y-auto max-h-[350px]">
-                        <p class="text-sm font-bold text-brand-dark mb-4 border-b pb-2">الموضوع: الدليل القاطع لنقض مستندات الخصوم في قضايا التحكيم</p>
-                        <div class="text-gray-700 leading-relaxed font-medium">
+                    <div class="p-6 email-body overflow-y-auto max-h-[380px]">
+                        <p class="text-sm font-bold text-brand-dark mb-4 border-b pb-2">الموضوع: إبطال مستندات الخصوم بأسس علمية في نزاعاتكم التجارية</p>
+                        <div class="text-gray-700 leading-relaxed font-medium text-sm md:text-base">
                             <p class="mb-3">سعادة الأستاذ [الاسم]،</p>
-                            <p class="mb-3">تخسر مكاتب المحاماة قضايا تجارية كبرى لمجرد الاعتماد على تقارير فنية ضعيفة يسهل نقضها أمام محاكم (DIFC) ولجان التحكيم.</p>
-                            <p class="mb-3">الخصم يقدم عقداً أو تنازلاً مزوراً، وإذا لم ينقض محاموك هذا المستند بأسس علمية صارمة، تضيع الملايين على موكليك.</p>
-                            <p class="mb-3">بصفتي خبيراً استشارياً ترأس لجنة التفتيش الفني لتقييم الخبراء بوزارة العدل، أقدم لمكتبكم دعماً فنياً مسانداً يفند تقارير الخصوم بناءً على معايير (ISO) الدولية.</p>
-                            <p class="mb-3">سأتواجد في دبي أواخر الشهر. هل يناسبك أن نلتقي لمدة ربع ساعة لمناقشة دعم قضاياكم الحالية والمستقبلية؟</p>
-                            <p class="mt-6 text-sm text-gray-500 font-bold">د. حسام الدين مصطفى<br>خبير استشاري بالطب الشرعي</p>
+                            <p class="mb-3">مكاتب المحاماة الكبرى تخسر أحياناً قضايا تحكيم بملايين الدولارات بسبب الاعتماد على تقارير فنية يسهل نقضها، وتحديداً في المحاكم التي تعتمد نظام الاستجواب الشفوي مثل محاكم مركز دبي المالي العالمي (DIFC).</p>
+                            <p class="mb-3">ترأست لجنة التفتيش الفني لتقييم الخبراء بوزارة العدل لسنوات. أقدم لمكتبكم الموقر دعماً فنياً مسانداً يفند تقارير الخصوم عبر تقارير قاطعة تتوافق مع معايير الجودة الدولية للاعتماد (ISO/EGAC).</p>
+                            <p class="mb-3">متى يمكننا ترتيب مكالمة سريعة هذا الأسبوع لبحث سبل التعاون في قضاياكم الحالية؟</p>
+                            <p class="mt-6 text-xs text-gray-500 font-bold">تحياتي،<br>د. حسام الدين مصطفى<br>خبير استشاري بالطب الشرعي</p>
                         </div>
                     </div>
                 </div>
@@ -377,68 +438,91 @@
         </div>
     </section>
 
+    <!-- Section 8: Image Gallery & Proof of Trust -->
+    <section class="portfolio-section bg-slate-50" id="slide8">
+        <div class="w-full text-center animate-on-scroll">
+            <h2 class="text-4xl lg:text-5xl font-black text-brand-primary mb-6">سجل حافل بالثقة والموثوقية</h2>
+            <p class="text-xl text-gray-600 mb-12 font-medium max-w-3xl mx-auto">جهات سيادية ومصرفية كبرى اعتمدت على خبراتنا في تأمين عملياتها وتدريب كوادرها.</p>
+            
+            <div class="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white animate-on-scroll delay-200">
+                <img src="https://myhomeegypt.net/wp-content/uploads/2026/05/d87490ad-18dd-4116-b834-82fa5b7e9b22.jpg" alt="شركاء النجاح والثقة" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+        </div>
+    </section>
+
     <!-- Modals for LinkedIn Posts -->
-    <div id="modal-post-1" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm p-4 no-print">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden animate-fade-up">
+    <div id="modal-post-1" class="fixed inset-0 z-[100] hidden items-center justify-center bg-brand-dark/80 backdrop-blur-sm p-4 no-print transition-opacity">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden">
             <div class="bg-brand-primary p-4 flex justify-between items-center text-white">
                 <h3 class="font-bold text-lg font-cairo">معاينة المنشور: القطاع المصرفي</h3>
-                <button onclick="closeModal('modal-post-1')" class="text-white hover:text-gray-300 text-2xl"><i class="fa-solid fa-xmark"></i></button>
+                <button onclick="closeModal('modal-post-1')" class="text-white hover:text-gray-300 text-2xl transition-colors"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="p-6 text-gray-800 font-medium leading-relaxed">
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="https://myhomeegypt.net/wp-content/uploads/2026/05/Untitled-design-69.png" class="w-12 h-12 rounded-full object-cover border border-gray-200">
+                <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                    <img src="https://myhomeegypt.net/wp-content/uploads/2026/05/Untitled-design-69.png" class="w-14 h-14 rounded-full object-cover border-2 border-brand-accent">
                     <div>
-                        <div class="font-bold text-brand-dark">د. حسام الدين مصطفى</div>
-                        <div class="text-xs text-gray-500">خبير استشاري محلف - الطب الشرعي</div>
+                        <div class="font-bold text-brand-dark text-lg">د. حسام الدين مصطفى</div>
+                        <div class="text-sm text-gray-500">خبير استشاري محلف - الطب الشرعي</div>
                     </div>
                 </div>
-                <p class="mb-4">"موظف في شركة متعددة الجنسيات بهونغ كونغ حول 25 مليون دولار مؤخراً لجهات احتيالية. السبب؟ مكالمة فيديو استخدم فيها المحتالون تقنية (Deepfake) لتقليد صوت وصورة المدير المالي للشركة.</p>
-                <p class="mb-4">نصف مديري الالتزام الذين أتحدث إليهم يعتقدون أن المشكلة تقنية بحتة، وأن برامج الحماية هي الحل. الحقيقة أن هذه الاختراقات الرقمية تعتمد دائماً على مستندات ورقية أو إلكترونية مزورة، مثل فواتير واعتمادات مستندية، لتمرير المعاملة داخل النظام البنكي.</p>
-                <p class="mb-4">خلال 33 عاماً من فحص المستندات في الإدارة العامة لأبحاث التزييف والتزوير بوزارة العدل، رأيت كيف ينهار التزوير المتقن أمام الفحص البشري الخبير. التقارير الفنية القاطعة، وليست الأنظمة الآلية وحدها، هي ما يحصن الصفقات المليارية.</p>
-                <p class="mb-4 text-brand-accent font-bold">الأنظمة التقنية تصدر إنذارات، لكن الخبير البشري هو من يمنع الكارثة. راجعوا إجراءات اعتماد الصفقات الكبرى لديكم، ولا تتركوا القرار الأخير لخوارزمية."</p>
+                <div class="space-y-4 text-[15px]">
+                    <p>"موظف في شركة متعددة الجنسيات بهونغ كونغ حول 25 مليون دولار مؤخراً لجهات احتيالية. السبب؟ مكالمة فيديو استخدم فيها المحتالون تقنية (Deepfake) لتقليد صوت وصورة المدير المالي للشركة.</p>
+                    <p>نصف مديري الالتزام الذين أتحدث إليهم يعتقدون أن المشكلة تقنية بحتة، وأن برامج الحماية هي الحل. الحقيقة أن هذه الاختراقات الرقمية تعتمد دائماً على مستندات ورقية أو إلكترونية مزورة، مثل فواتير واعتمادات مستندية، لتمرير المعاملة داخل النظام البنكي.</p>
+                    <p>خلال 33 عاماً من فحص المستندات في الإدارة العامة لأبحاث التزييف والتزوير بوزارة العدل، رأيت كيف ينهار التزوير المتقن أمام الفحص البشري الخبير. التقارير الفنية القاطعة، وليست الأنظمة الآلية وحدها، هي ما يحصن الصفقات المليارية ويحمي السيولة النقدية للبنك.</p>
+                    <p class="text-brand-primary font-bold bg-blue-50 p-3 rounded-lg border-r-4 border-brand-accent">الأنظمة التقنية تصدر إنذارات، لكن الخبير البشري هو من يمنع الكارثة. راجعوا إجراءات اعتماد الصفقات الكبرى لديكم، ولا تتركوا القرار الأخير لخوارزمية."</p>
+                </div>
                 
-                <div class="mt-6 pt-4 border-t border-gray-100">
-                    <a href="#" onclick="alert('سيتم تفعيل الرابط بعد نشر البوست الفعلي على لينكد إن'); return false;" class="text-brand-primary font-bold text-sm hover:underline"><i class="fa-solid fa-link"></i> رابط المنشور الحي (قريباً للتجربة)</a>
+                <div class="mt-6 pt-4 border-t border-gray-100 flex justify-end">
+                    <a href="https://hosameldinmostafa.com" target="_blank" class="text-white bg-brand-accent hover:bg-sky-600 px-4 py-2 rounded-lg font-bold text-sm transition-colors shadow-md">
+                        <i class="fa-solid fa-link mr-1"></i> زيارة الموقع (hosameldinmostafa.com)
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="modal-post-2" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm p-4 no-print">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden animate-fade-up">
+    <div id="modal-post-2" class="fixed inset-0 z-[100] hidden items-center justify-center bg-brand-dark/80 backdrop-blur-sm p-4 no-print transition-opacity">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden">
             <div class="bg-brand-primary p-4 flex justify-between items-center text-white">
                 <h3 class="font-bold text-lg font-cairo">معاينة المنشور: المطورين العقاريين / المحاماة</h3>
-                <button onclick="closeModal('modal-post-2')" class="text-white hover:text-gray-300 text-2xl"><i class="fa-solid fa-xmark"></i></button>
+                <button onclick="closeModal('modal-post-2')" class="text-white hover:text-gray-300 text-2xl transition-colors"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="p-6 text-gray-800 font-medium leading-relaxed">
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="https://myhomeegypt.net/wp-content/uploads/2026/05/Untitled-design-69.png" class="w-12 h-12 rounded-full object-cover border border-gray-200">
+                <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                    <img src="https://myhomeegypt.net/wp-content/uploads/2026/05/Untitled-design-69.png" class="w-14 h-14 rounded-full object-cover border-2 border-brand-accent">
                     <div>
-                        <div class="font-bold text-brand-dark">د. حسام الدين مصطفى</div>
-                        <div class="text-xs text-gray-500">خبير استشاري محلف - الطب الشرعي</div>
+                        <div class="font-bold text-brand-dark text-lg">د. حسام الدين مصطفى</div>
+                        <div class="text-sm text-gray-500">خبير استشاري محلف - الطب الشرعي</div>
                     </div>
                 </div>
-                <p class="mb-4">"تم تجميد مشروع عقاري ضخم مؤخراً بسبب صك ملكية ووكالة قانونية مزورة. المزورون لم يخترقوا النظام البنكي؛ بل اخترقوا "إجراءات التحقق المستندي".</p>
-                <p class="mb-4">الأنظمة الرقمية الحديثة تقرأ البيانات، لكنها لا تكشف التلاعب الفيزيائي الدقيق في الأختام والتوقيعات. خلال 33 عاماً من فحص المستندات في الإدارة العامة لأبحاث التزييف والتزوير بوزارة العدل، أثبتُّ مراراً أن التقرير الفني البشري هو خط الدفاع الأخير الموثوق أمام لجان التحكيم والقضاء.</p>
-                <p class="mb-4 text-brand-accent font-bold">إذا كنت تدير مخاطر بمليارات الدراهم، لا تترك قرار اعتماد الصفقات الكبرى لبرامج المسح الضوئي وحدها. الفحص الاستباقي للوكالات يحمي استثماراتك من قرارات التجميد الكارثية."</p>
+                <div class="space-y-4 text-[15px]">
+                    <p>"تم تجميد مشروع عقاري ضخم مؤخراً بسبب صك ملكية ووكالة قانونية مزورة. المزورون لم يخترقوا النظام البنكي؛ بل اخترقوا "إجراءات التحقق المستندي".</p>
+                    <p>الأنظمة الرقمية الحديثة تقرأ البيانات، لكنها لا تكشف التلاعب الفيزيائي الدقيق في الأختام والتوقيعات. خلال 33 عاماً من فحص المستندات في الإدارة العامة لأبحاث التزييف والتزوير بوزارة العدل، أثبتُّ مراراً أن التقرير الفني البشري هو خط الدفاع الأخير الموثوق أمام لجان التحكيم والقضاء.</p>
+                    <p class="text-brand-primary font-bold bg-blue-50 p-3 rounded-lg border-r-4 border-brand-accent">إذا كنت تدير مخاطر بمليارات الدراهم، لا تترك قرار اعتماد الصفقات الكبرى لبرامج المسح الضوئي وحدها. الفحص الاستباقي للوكالات يحمي استثماراتك من قرارات التجميد الكارثية."</p>
+                </div>
                 
-                <div class="mt-6 pt-4 border-t border-gray-100">
-                    <a href="#" onclick="alert('سيتم تفعيل الرابط بعد نشر البوست الفعلي على لينكد إن'); return false;" class="text-brand-primary font-bold text-sm hover:underline"><i class="fa-solid fa-link"></i> رابط المنشور الحي (قريباً للتجربة)</a>
+                <div class="mt-6 pt-4 border-t border-gray-100 flex justify-end">
+                    <a href="https://hosameldinmostafa.com" target="_blank" class="text-white bg-brand-accent hover:bg-sky-600 px-4 py-2 rounded-lg font-bold text-sm transition-colors shadow-md">
+                        <i class="fa-solid fa-link mr-1"></i> زيارة الموقع (hosameldinmostafa.com)
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Initialization Scripts -->
     <script>
-        // Modal functions
+        // Modal Control Functions
         function openModal(id) {
-            document.getElementById(id).classList.remove('hidden');
-            document.getElementById(id).classList.add('flex');
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Small delay to allow display:flex to apply before adding opacity class if needed
+            setTimeout(() => modal.classList.add('opacity-100'), 10);
         }
         function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
-            document.getElementById(id).classList.remove('flex');
+            const modal = document.getElementById(id);
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
         }
 
         // Close modal on outside click
@@ -449,20 +533,18 @@
             }
         }
 
-        // Intersection Observer for scroll animations
+        // Intersection Observer for fluid scroll animations
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.15
+                threshold: 0.12
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('in-view');
-                        // Optional: stop observing once animated
-                        // observer.unobserve(entry.target); 
                     }
                 });
             }, observerOptions);
